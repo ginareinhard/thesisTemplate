@@ -1,0 +1,268 @@
+\begin{titlepage}
+    \centering
+
+    \includegraphics[width=0.2\textwidth]{logo.jpg}\par
+    \vspace{0.5cm}
+
+    {\Large Universität zu Köln \par}
+    {\large Faculty of Arts and Humanities, Department of Linguistics \par}
+    \vspace{1cm}
+    
+    {\Large\itshape Master's Thesis \par}
+    \vspace{1cm}
+
+    {\LARGE\bfseries TITLE OF THE THESIS \par}
+    \vspace{0.7cm}
+    
+        \begin{center}
+        {\normalsize \textit{A Thesis Submitted in Partial Fulfillment of the Requirements for the Degree}}\\[0.25cm]
+        {\Large Master of Arts}\\[0.25cm]
+        {\normalsize \textit{in the}}\\[0.25cm]
+        {\Large Master Linguistik}
+    \end{center}
+    \vfill
+    
+    {\large Author: AUTHOR NAME \par}
+    {\large Matriculation Number: MATRICULATION NUMBER\par}
+    \vspace{1cm}
+    {\large Supervisor: SUPERVISOR NAME \par}
+    
+    \vspace{1cm}
+
+    {\large DATE OF SUBMISSION \par}
+
+\end{titlepage}
+
+{{< pagebreak >}}
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+{{< pagebreak >}}
+
+\listoffigures
+
+\listoftables
+
+```{r load-libraries, include=FALSE}
+
+# You can insert R code in code chunks like this one at any point in the document. Make sure the placement of each code chunk matches the topic discussed in the surrounding text. You can hide code chunks in the rendered PDF by setting include = FALSE in the curly brackets above. It is best practice to give each code chunk a meaningful name, for example "load-libraries" or another name that summarizes what the code in the chunk does.
+
+library(ggplot2)
+library(knitr)
+
+```
+
+{{< pagebreak >}}
+
+\pagenumbering{arabic}
+
+# Introduction {#sec-introduction}
+
+Write your introduction text here. Name your sections (e.g. "#sec-introduction"). You can use the section names for cross references like this:
+
+"In @sec-discussion, ..."
+
+# Chapter Title {#sec-example}
+
+Add some text about chapter 2, if you like.
+
+## Subchapter Title {#sec-example2}
+
+Add some text about chapter 2.1, if you like.
+
+### Subchapter Title {#sec-example3}
+
+You can include references (via BibTex from the file `references.bib`) and images (from the `image` folder) in your document.
+
+Citations are inserted using their BibTeX keys in square brackets. Using `@key` includes the author's name in the citation, while `-@key` suppresses the author name and is useful when the author is already mentioned in the text. Page numbers can be added after a colon.
+
+Figures are numbered automatically and can be referenced in the text using their figure labels (e.g. `@fig-dialects`).
+
+For example:
+
+"Cornelissen [-@cornelissen_sprachgeschichte_2015: 73] refers to North Rhine-Westphalia as *Land der Tausend Dialekte* 'land of a thousand dialects' to emphasise the federal state's rich linguistic diversity. This diversity is illustrated in Cornelissen's map shown in @fig-dialects, published by the @ilr_dialects, which categorises the state into ten distinct dialect areas. The map's structure is based on 19th-century dialect research [@cornelissen_sprachgeschichte_2015: 73]."
+
+![Dialects in NRW [@ilr_dialects]](images/example_image.jpg){#fig-dialects}
+
+### Subchapter Title {#sec-example4}
+
+If necessary, you can add another pagebreak anywhere in the document like this (try deleting the page break to see how the pdf document comes out without it):
+
+{{< pagebreak >}}
+
+## Subchapter Title {#sec-example5}
+
+If your code creates a plot that you want to include and refer to as a figure (e.g. visualizations created with {ggplot} in your results section), you can do it like this:
+
+::: {#fig-species}
+```{r species, echo=FALSE}
+
+#create plot
+ggplot(iris, aes(x = Species, y = Sepal.Length)) +
+geom_boxplot(fill = "steelblue")
+
+```
+
+Sepal Length by Species
+:::
+
+Setting `echo = FALSE` means that the R code itself is not shown in the rendered document and only the resulting plot is displayed. The text below the code chunk is displayed as the figure caption. The figure can be referenced in the text using @fig-species.
+
+### Subchapter Title {#sec-example6}
+
+Tables can be created directly in RStudio by selecting "Table" → "Insert Table…" from the menu bar. Tables defined in this way can be cross-referenced within the text using Quarto's table labels. For example:
+
+"As illustrated in @tbl-morpho-variables, ..."
+
+::: {#tbl-morpho-variables}
+| **Linguistic feature** | **Variable** | **Description** | **Examples** |
+|------------------|------------------|-------------------|------------------|
+| diminutive suffix | biss (chen/ken) | *-chen* vs. *-ken* in lexical variants of *Schnapsglas* 'shot glass' | *Pinnchen*; *Pinneken*; *Schnapsgläschen*; *Schnapsgläsken* |
+|  | pinn (chen/ken) | *-chen* vs. *-ken* in lexical variants of *bisschen* 'a little' | *bisschen*; *bissken*; *Stückchen*; *Stücksken* |
+
+Morphological Variables with Examples
+:::
+
+Alternatively, tables can be generated from dataframes. One approach is to use the `kable()` function from the {knitr} package, which converts data frames into pretty tables for pdf output. This is an example of this approach using the built-in `iris` dataset:
+
+"@tbl-iris shows..."
+
+::: {#tbl-iris}
+```{r iris-tbl, echo=FALSE}
+
+iris_table <- head(iris[, 1:3])
+
+# Display a table with a caption using kable() from the library knitr:
+kable(
+iris_table,
+caption = "Example Table Showing the First 6 Rows of the Iris Dataset"
+)
+
+```
+:::
+
+### Subchapter Title {#sec-example7}
+
+To create a footnote[^thesis-1], head to "Insert" in RStudio and choose "Footnote".
+
+[^thesis-1]: Add some footnote text.
+
+## Subchapter Title {#sec-example8}
+
+You can even include IPA symbols/transcriptions like this:
+
+"The *Benrather Linie* separates German dialects which have retained the plosive \ipa{[k]} (as in *maken* 'to make') from those where \ipa{[k]} shifted to \ipa{[ç]} (as in *machen* 'to make') during the Second Sound Shift, a process that unfolded in stages, starting before the 7th century [@cornelissen_sprachgeschichte_2015: 21-22; @schmidt2019historisches: 526]. It also marks other phonological contrasts, such as \ipa{[p]} vs. \ipa{[f]} and \ipa{[t]} vs. \ipa{[s]}, though not consistently across all lexical items. North of the *Benrather Linie* lies the Low German dialect continuum, while south of it are the Central German dialects [@cornelissen_sprachgeschichte_2015: 21-25]."
+
+### Subchapter Title {#sec-example9}
+
+Include language examples like this:
+
+"The use of *sein* 'to be' instead of *haben* 'to have' as the auxiliary in the present perfect is a regional feature in northwestern Germany, including Westphalia [@AdA2003] (round 4, question 1c). For example, in the following sentences, examples 1.a and 2.a use a form of *haben*, while example 1.b and 2.b use a form of *sein*, with no change in meaning:
+
+> (1) 
+>
+>     (a) *Ich habe mit Krafttraining angefangen.*\
+>         'I (have) started strength training.'
+>
+>     (b) *Ich bin mit Krafttraining angefangen.*\
+>         'I (have) started strength training.'
+
+> (2) 
+>
+>     (a) *Ich habe angefangen zu schreiben.*\
+>         'I (have) started writing.'
+>
+>     (b) *Ich bin angefangen zu schreiben.*\
+>         'I (have) started writing.' "
+
+### Subchapter Title {#sec-example10}
+
+You can also use R code directly in the text (called "inline code") to dynamically display values computed in your code. For example, the following code chunk defines a value:
+
+```{r sample-size, include=FALSE}
+
+sample_size <- 42
+
+```
+
+You can then insert that value into the text using inline R code, so that it updates automatically if the code changes. For example:
+
+"I included the sociodemographic metadata for the `r sample_size` participants."
+
+Inline R code can also be used for more complex code, a simple example: `r sample_size + 1`
+
+### Subchapter Title {#sec-example11}
+
+If you want to get a bit nerdy, you can include LaTeX formulas and inline math:
+
+"The distance between two individuals is mathematically expressed as:
+
+$$
+d^2_{i,i'} = C \sum_{k=1}^{K} \frac{(x_{ik} - x_{i'k})^2}{I_k}
+$$
+
+This formula calculates the squared distance to determine which categories the individuals share or differ on: for each category $k$, we examine whether individual $i$ and individual $i'$ possess that category (with values 1 or 0), and compute the squared difference of their values $(x_{ik} - x_{i'k})^2$. The squared difference equals 0 if both either have or do not have the category, and 1 if they differ. Since not all categories are equally informative, these differences are weighted by the frequency of the respective category, i.e. by dividing by ${I_k}$ (the total number of individuals possessing category $k$). This way, uncommon but distinctive features contribute more to distinguishing individuals [@husson_exploratory_2017: 134]."
+
+# Chapter Title {#sec-example12}
+
+Add your chapter text.
+
+# Discussion {#sec-discussion}
+
+Add your discussion text.
+
+# Conclusion {#sec-conclusion}
+
+Add your conclusion text.
+
+{{< pagebreak >}}
+
+# References
+
+## Literature
+
+::: {#refs}
+:::
+
+## Packages Used
+
+```{r package-versions, echo=FALSE}
+
+sessionInfo()
+
+```
+
+## Package References
+
+```{r generateBibliography, results="asis", echo=FALSE}
+
+packages.bib <- sapply(1:length(loadedNamespaces()), function(i) toBibtex(citation(loadedNamespaces()[i])))
+
+knitr::write_bib(c(.packages(), "knitr"), "packages.bib")
+
+require("knitcitations")
+cleanbib()
+options("citation_format" = "pandoc")
+read.bibtex(file = "packages.bib")
+
+```
+
+{{< pagebreak >}}
+
+# Appendix A: Additional Tables {.unnumbered}
+
+Add additional tables, if you like.
+
+{{< pagebreak >}}
+
+# Appendix B: Additional Figures {.unnumbered}
+
+Add additional figures, if you like.
+
+{{< pagebreak >}}
+
+# Appendix C: Code {.unnumbered}
+
+The complete code used for the analyses in this thesis is contained within the Quarto (`.qmd`) file, which is accessible via the following Git repository: LINK

@@ -1,0 +1,37 @@
+project:
+  type: default
+  output-dir: _output
+
+execute:
+  warning: false
+
+bibliography: references.bib
+csl: apa_7th.csl
+link-citations: true
+
+format:
+  pdf:
+    documentclass: scrartcl
+    number-sections: true
+    fig-width: 8
+    fig-height: 6
+    latex-engine: xelatex
+    keep-tex: true
+    header-includes: |
+      \usepackage{fontspec}
+      \newfontfamily\ipaFont{Charis SIL}
+      \newcommand{\ipa}[1]{{\ipaFont #1}}
+      \makeatletter
+      \renewcommand{\tableofcontents}{%
+        \section*{Table of Contents}%
+        \@starttoc{toc}%
+      }
+      \makeatother
+
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    embed-resources: true
+    lof: true
+    lot: true
