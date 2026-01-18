@@ -10,7 +10,7 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 
 ## Preview
 
-![](thesis.pdf)
+![](thesisPreview.png)
 
 ## Requirements
 
