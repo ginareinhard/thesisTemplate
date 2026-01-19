@@ -19,7 +19,7 @@ format:
     keep-tex: true
     header-includes: |
       \usepackage{fontspec}
-      \newfontfamily\ipaFont{Charis SIL}
+      \newfontfamily\ipaFont{Charis}
       \newcommand{\ipa}[1]{{\ipaFont #1}}
       \makeatletter
       \renewcommand{\tableofcontents}{%

@@ -6,7 +6,7 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 -   figures, tables, and linguistic examples
 -   cross-references (sections, figures, tables)
 -   APA-style citations
--   IPA symbols (via Charis SIL)
+-   IPA symbols (via Charis)
 
 ## Preview
 
@@ -22,7 +22,7 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 
 -   LaTeX distribution (TinyTeX); install TinyTeX in R: `tinytex::install_tinytex()`
 
--   Charis SIL; download it from: [https://software.sil.org/charis/](#0)
+-   Charis; download it from: <https://software.sil.org/charis/download/>
 
 ## How to use it
 
