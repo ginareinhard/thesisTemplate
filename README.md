@@ -2,7 +2,7 @@
 
 This repository provides a Quarto template for a term paper, BA thesis, or MA thesis in linguistics with:
 
--   pdf output
+-   PDF output
 -   figures, tables, and linguistic examples
 -   cross-references (sections, figures, tables)
 -   APA-style citations
@@ -20,9 +20,9 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 
 -   Quarto
 
--   LaTeX distribution (TinyTeX)
+-   LaTeX distribution (TinyTeX); install TinyTeX in R: `tinytex::install_tinytex()`
 
-Install TinyTeX in R: `tinytex::install_tinytex()`
+-   Charis SIL; download it from: [https://software.sil.org/charis/](#0)
 
 ## How to use it
 
@@ -37,14 +37,14 @@ Install TinyTeX in R: `tinytex::install_tinytex()`
 
 -   Citation style: APA 7 (`apa_7th.csl`)
 
-## IPA Support
+## Rendering the thesis
 
-IPA symbols are rendered using Charis SIL. Download it from: [https://software.sil.org/charis/](#0)
-
-## Rendering the Thesis
-
-To render the thesis as a pdf click "Render" in RStudio or: `quarto::quarto_render("thesis.qmd")`
+To render the thesis as a PDF click "Render" in RStudio or: `quarto::quarto_render("thesis.qmd")`
 
 ## License
 
 This template is released under the CC0-1.0 license. You are free to modify and redistribute it.
+
+## How to cite
+
+DOI to be added.

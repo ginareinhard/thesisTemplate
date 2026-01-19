@@ -84,11 +84,11 @@ For example:
 
 "Cornelissen [-@cornelissen_sprachgeschichte_2015: 73] refers to North Rhine-Westphalia as *Land der Tausend Dialekte* 'land of a thousand dialects' to emphasise the federal state's rich linguistic diversity. This diversity is illustrated in Cornelissen's map shown in @fig-dialects, published by the @ilr_dialects, which categorises the state into ten distinct dialect areas. The map's structure is based on 19th-century dialect research [@cornelissen_sprachgeschichte_2015: 73]."
 
-![Dialects in NRW [@ilr_dialects]](images/example_image.jpg){#fig-dialects}
+![“Land der tausend Dialekte” [@ilr_dialects], CC BY 4.0 ](images/example_image.jpg){#fig-dialects}
 
 ### Subchapter Title {#sec-example4}
 
-If necessary, you can add another pagebreak anywhere in the document like this (try deleting the page break to see how the pdf document comes out without it):
+If necessary, you can add another pagebreak anywhere in the document like this (try deleting the pagebreak to see how the PDF document comes out without it):
 
 {{< pagebreak >}}
 
@@ -118,14 +118,14 @@ Tables can be created directly in RStudio by selecting "Table" → "Insert Table
 
 ::: {#tbl-morpho-variables}
 | **Linguistic feature** | **Variable** | **Description** | **Examples** |
-|------------------|------------------|-------------------|------------------|
+|------------------|------------------|------------------|------------------|
 | diminutive suffix | biss (chen/ken) | *-chen* vs. *-ken* in lexical variants of *Schnapsglas* 'shot glass' | *Pinnchen*; *Pinneken*; *Schnapsgläschen*; *Schnapsgläsken* |
 |  | pinn (chen/ken) | *-chen* vs. *-ken* in lexical variants of *bisschen* 'a little' | *bisschen*; *bissken*; *Stückchen*; *Stücksken* |
 
 Morphological Variables with Examples
 :::
 
-Alternatively, tables can be generated from dataframes. One approach is to use the `kable()` function from the {knitr} package, which converts data frames into pretty tables for pdf output. This is an example of this approach using the built-in `iris` dataset:
+Alternatively, tables can be generated from dataframes. One approach is to use the `kable()` function from the {knitr} package, which converts data frames into pretty tables for PDF output. This is an example of this approach using the built-in `iris` dataset:
 
 "@tbl-iris shows..."
 
@@ -187,7 +187,7 @@ sample_size <- 42
 
 ```
 
-You can then insert that value into the text using inline R code, so that it updates automatically if the code changes. For example:
+You can then insert that value into the text using inline R code, so that it updates automatically if the data changes. For example:
 
 "I included the sociodemographic metadata for the `r sample_size` participants."
 
