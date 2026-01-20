@@ -22,9 +22,27 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 
 -   LaTeX distribution (TinyTeX); install TinyTeX in R: `tinytex::install_tinytex()`
 
--   Charis; download it from: <https://software.sil.org/charis/download/>
+-   Charis font (version 7.000); download it from: <https://software.sil.org/charis/download/>
 
-## How to use it
+## **Installing Charis:**
+
+**macOS:**
+
+1.  Open the application "Font Book" and click on "My Fonts".
+2.  Drag the downloaded "Charis-7.000" folder into "My Fonts".
+
+**Windows:**
+
+1.  Unzip the downloaded "Charis-7.000" folder and open it.
+2.  Mark all .ttf files, right-click, and choose "Install" (or "Install for all users").
+
+**Linux (for all users):**
+
+1.  Unzip the downloaded "Charis-7.000" folder.
+2.  Copy the font files to the system directory: `sudo cp Charis-7.000/*.ttf /usr/share/fonts/`.
+3.  Update the font cache: `sudo fc-cache -f`.
+
+## How to use the template
 
 1.  Click "Code" and "Download ZIP"
 2.  Unzip and open the folder
