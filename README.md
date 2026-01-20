@@ -6,7 +6,7 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 -   figures, tables, and linguistic examples
 -   cross-references (sections, figures, tables)
 -   APA-style citations
--   IPA symbols (via Charis)
+-   IPA symbols
 
 ## Preview
 
@@ -26,6 +26,8 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 
 ## **Installing Charis:**
 
+The template uses the Charis font family to render IPA symbols. For TinyTeX/XeLaTeX to recognize it, Charis must be installed system-wide (for all users).
+
 **macOS:**
 
 1.  Open the application "Font Book" and click on "My Fonts".
@@ -34,15 +36,16 @@ This repository provides a Quarto template for a term paper, BA thesis, or MA th
 **Windows:**
 
 1.  Unzip the downloaded "Charis-7.000" folder and open it.
-2.  Mark all .ttf files, right-click, and choose "Install" (or "Install for all users").
+2.  Mark all .ttf files, right-click, choose "Show more options", and "Install for all users".
+3.  Restart RStudio after installation.
 
-**Linux (for all users):**
+**Ubuntu:**
 
 1.  Unzip the downloaded "Charis-7.000" folder.
 2.  Copy the font files to the system directory: `sudo cp Charis-7.000/*.ttf /usr/share/fonts/`.
 3.  Update the font cache: `sudo fc-cache -f`.
 
-## How to use the template
+## How to use
 
 1.  Click "Code" and "Download ZIP"
 2.  Unzip and open the folder
