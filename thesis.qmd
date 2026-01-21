@@ -45,6 +45,15 @@
 
 \listoftables
 
+```{r install-packages, include=FALSE}
+
+#If rendering fails with “could not find function 'cleanbib'”, install:
+
+#install.packages("knitcitations")
+#install.packages("rmarkdown")
+
+```
+
 ```{r load-libraries, include=FALSE}
 
 # You can insert R code in code chunks like this one at any point in the document. Make sure the placement of each code chunk matches the topic discussed in the surrounding text. You can hide code chunks in the rendered PDF by setting include = FALSE in the curly brackets above. It is best practice to give each code chunk a meaningful name, for example "load-libraries" or another name that summarizes what the code in the chunk does.
@@ -84,7 +93,7 @@ For example:
 
 "Cornelissen [-@cornelissen_sprachgeschichte_2015: 73] refers to North Rhine-Westphalia as *Land der Tausend Dialekte* 'land of a thousand dialects' to emphasise the federal state's rich linguistic diversity. This diversity is illustrated in Cornelissen's map shown in @fig-dialects, published by the @ilr_dialects, which categorises the state into ten distinct dialect areas. The map's structure is based on 19th-century dialect research [@cornelissen_sprachgeschichte_2015: 73]."
 
-![“Land der tausend Dialekte” [@ilr_dialects], CC BY 4.0 ](images/example_image.jpg){#fig-dialects}
+![“Land der tausend Dialekte” [@ilr_dialects], CC BY 4.0](images/example_image.jpg){#fig-dialects}
 
 ### Subchapter Title {#sec-example4}
 
@@ -134,7 +143,7 @@ Alternatively, tables can be generated from dataframes. One approach is to use t
 
 iris_table <- head(iris[, 1:3])
 
-# Display a table with a caption using kable() from the library knitr:
+#display a table with a caption using kable() from the library knitr:
 kable(
 iris_table,
 caption = "Example Table Showing the First 6 Rows of the Iris Dataset"

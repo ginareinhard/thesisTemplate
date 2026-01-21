@@ -42,21 +42,24 @@ The template uses the Charis font family to render IPA symbols. For TinyTeX/XeLa
 **Ubuntu:**
 
 1.  Unzip the downloaded "Charis-7.000" folder.
-2.  Copy the font files to the system directory: `sudo cp Charis-7.000/*.ttf /usr/share/fonts/`.
-3.  Update the font cache: `sudo fc-cache -f`.
+2.  Open the "Charis-7.000" folder via the terminal.
+3.  Copy all .ttf font files to the system font directory: `sudo cp *.ttf /usr/share/fonts/`
+4.  Update the font cache: `sudo fc-cache -f`
 
 ## How to use
 
-1.  Click "Code" and "Download ZIP"
-2.  Unzip and open the folder
-3.  Open `thesis.Rproj` in RStudio
-4.  Open `thesis.qmd` and start writing
+1.  Click "Code" and "Download ZIP".
+2.  Unzip and open the folder.
+3.  Open `thesis.Rproj` in RStudio.
+4.  Open `thesis.qmd` and start writing.
 
 ## Citations
 
 -   Add your references in BibTeX format to the bibliography file: `references.bib`
 
 -   Citation style: APA 7 (`apa_7th.csl`)
+
+To generate the "Package References" section, the R packages {knitcitations} and {rmarkdown} are required. If rendering fails (for example with "could not find function 'cleanbib'"), RStudio will usually prompt you to install the missing packages automatically. If it doesn't, you can install them manually: `install.packages("knitcitations")` and `install.packages("rmarkdown")`.
 
 ## Rendering the thesis
 
@@ -68,4 +71,4 @@ This template is released under the CC0-1.0 license. You are free to modify and 
 
 ## How to cite
 
-DOI to be added.
+Reinhard, G. (2026). *Quarto Thesis Template (Linguistics)* \[Computer software\]. GitHub. <https://github.com/ginareinhard/thesisTemplate>
