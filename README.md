@@ -30,8 +30,9 @@ The template uses the Charis font family to render IPA symbols. For TinyTeX/XeLa
 
 **macOS:**
 
-1.  Open the application "Font Book" and click on "My Fonts".
-2.  Drag the downloaded "Charis-7.000" folder into "My Fonts".
+1.  Unzip the downloaded "Charis-7.000" folder (if necessary).
+2.  Open the application "Font Book" and click on "My Fonts".
+3.  Drag the downloaded "Charis-7.000" folder into "My Fonts".
 
 **Windows:**
 
@@ -65,10 +66,10 @@ To generate the "Package References" section, the R packages {knitcitations} and
 
 To render the thesis as a PDF click "Render" in RStudio or: `quarto::quarto_render("thesis.qmd")`
 
+## Additional resources / learning materials
+
+For an introduction to literate programming with Quarto, see chapter 14 "Reproducible research and academic writing in Quarto" in *Data Analysis for the Language Sciences* *- A very gentle introduction to statistics and data visualisation in R* (Elen Le Foll). The work-in-progress draft of this chapter can be accessed here: <https://elenlefoll.github.io/RstatsTextbook/14_LiterateProgramming.html>
+
 ## License
 
 This template is released under the CC0-1.0 license. You are free to modify and redistribute it.
-
-## How to cite
-
-Reinhard, G. (2026). *Quarto Thesis Template (Linguistics)* \[Computer software\]. GitHub. <https://github.com/ginareinhard/thesisTemplate>
