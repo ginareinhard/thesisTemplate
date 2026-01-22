@@ -73,3 +73,7 @@ For an introduction to literate programming with Quarto, see chapter 14 "Reprodu
 ## License
 
 This template is released under the CC0-1.0 license. You are free to modify and redistribute it.
+
+## How to cite
+
+Reinhard, G. (2026). *Quarto Thesis Template (Linguistics)* \[Computer software\]. Zenodo. <https://doi.org/10.5281/zenodo.18335762>
